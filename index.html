@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./Give Me a Title!_files/style.css">  <!-- Insert StyleSheet -->
     <link rel="icon" href="https://cardadfar.github.io/stuco_webdev_website/assets/files/cool-icon.png">                    <!-- Insert Icon -->
     <script src="./Give Me a Title!_files/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <style type="text/css">
@@ -44,9 +45,19 @@
             margin: 0;
             display: inline-block;
         }
+        .nav-bar>.element:hover {
+            color: red;
+            transition-property: color;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 1s; }
+        }
+
+
 
         a:hover {
             text-decoration: underline;
+            
         }
 
 

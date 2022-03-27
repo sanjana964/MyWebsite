@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./Give Me a Title!_files/style.css">  <!-- Insert StyleSheet -->
     <link rel="icon" href="https://cardadfar.github.io/stuco_webdev_website/assets/files/cool-icon.png">                    <!-- Insert Icon -->
-    <script src="./Give Me a Title!_files/jquery.min.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+
     <style type="text/css">
         p {
             font-family:  Oswald;
@@ -26,6 +27,7 @@
             width: 300px;
             text-align: center;
             
+            
         }
 
         .nav-bar{
@@ -35,6 +37,7 @@
             margin-top: 0;
             position: sticky;
             top: 0px;
+            opacity: 80%;
         }
 
         .nav-bar>.element {
@@ -44,21 +47,18 @@
             text-align: center;
             margin: 0;
             display: inline-block;
+            margin-left:  0px;
         }
         .nav-bar>.element:hover {
-            color: red;
+            color: mediumpurple;
+            text-decoration: underline;
             transition-property: color;
             transition-duration: 2s;
             transition-timing-function: linear;
-            transition-delay: 1s; }
+            transition-delay: 0s; }
         }
+        
 
-
-
-        a:hover {
-            text-decoration: underline;
-            
-        }
 
 
 
@@ -91,9 +91,10 @@
         
             
         .imageee {
-            width: 400px;
+            width: 300px;
             height: 400px;
             display:  inline-block;
+            opacity: 100%;
         }
 
 
@@ -116,7 +117,22 @@
 
 
         }
+        .price {
+            opacity: 0%;
+            margin-left: 30px;
+            text-align: center;
+
+        }
+        .first {
+            
+            margin-left: 30px;
+            vertical-align: center;
+        }
     </style>
+
+    
+
+
 
     <div class=font_style>
         <p> Welcome! </p>
@@ -131,71 +147,83 @@
     </div>
 
     <div class=imageee>
-        <img id=img src='NatureMadhubani.png'>
-        <p> Nature Madhubani; Price: $1000 </p>
+        <img class = first id=img src='NatureMadhubani.png'>
+        <p class="price"> Nature Madhubani </p>
     </div>
     <div class=imageee>
-        <img id=img src='NatureMadhubani.png'>
-        <p> Nature Madhubani; Price: $1000 </p>
+        <img class = first id=img src='bridalmadhubani.jpg'>
+        <p class=price> Pumpkin Carving CMU Dog </p>
     </div>
     <div class=imageee>
-        <img id=img src='NatureMadhubani.png'>
-        <p> Nature Madhubani; Price: $1000 </p>
+        <img class = first id=img src='EyeDrawing.jpg'>
+        <p class=price> Eye Drawing </p>
     </div>
     <br>
+
+
     <div class=imageee>
-        <img id=img src='NatureMadhubani.png'>
-        <p> Nature Madhubani; Price: $1000 </p>
+        <img class = first id=img src='Introspection.png'>
+        <p class=price> Introspection </p>
+    </div>
+    <div class=imageee>
+        <img class = first id=img src='GaneshaThanjavurArt.jpg'>
+        <p class=price> Ganesha </p>
+    </div>
+    <div class=imageee>
+        <img class = first id=img src='succulents.HEIC'>
+        <p class=price> Nature Madhubani </p>
     </div>
 
 
 
-    <div class=row>
-        <div class='column'>
-            <img id=img src='NatureMadhubani.png'>
-            <p> Nature Madhubani; Price: $1000 </p>
-        </div>
 
-        <div class='column'>
-            <img id=img src='SanjanaKrishnaHalloweenContest.jpeg'>
-            <p> Pumpkin Carving CMU Dog; Price: N/A </p>
-        </div>
-  
 
-        <div class='column'>
-            <img id=img src='EyeDrawing.jpg'>
-            <p> Eye Drawing! </p>
-        </div>
-
+    
         
-    </div>
-    <div class=row>
-        <div class='column'>
-            <img id=img src='Introspection.png'>
-            <p> Me! </p>
-        </div>
-
-        <div class='column'>
-            <img id=img src='NatureMadhubani.png'>
-            <p> Duplicate! </p>
-        </div>
-  
-
-        <div class='column'>
-            <img id=img src='GaneshaThanjavurArt.jpg'>
-            <p> Ganesha Thanjavur Art! </p>
-        </div>
-
-        
-    </div>
+    
 
 
     <div class=center-b>
         <p> Why do you like drawing? </p>
         <input class=input_class type="text" name="input_field" placeholder="because it make's me happy...">
     </div>
+    <script type="text/javascript">
 
-    <script type="text/javascript" src="interactions.js"></script>    <!-- Insert JQuery Script -->
+        $(document).ready(function() {
+
+        $(".a").hover( function() { 
+        $(this).animate({'text-decoration':'underline'},1000);
+        });
+       
+        var clicks=0;
+        $(".imageee").click( function() {
+            clicks++;
+            if (clicks%2==0)
+                {$(".imageee").animate({'opacity':'100%'},500);
+                $(".price").animate({'opacity':'0%'},500);}
+
+            else{
+                $(".imageee").css('opacity','0%');
+                $(this).css('opacity','100%');
+                $(".price").animate({'opacity':'100%'},1000);}
+                
+
+
+            
+            
+        });
+
+
+        });
+        
+        
+
+    </script>
+
+    
+
+
+    
 
 </body>
 </html>

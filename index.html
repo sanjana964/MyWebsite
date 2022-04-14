@@ -128,6 +128,10 @@
             margin-left: 30px;
             vertical-align: center;
         }
+        .mailinglist {
+            text-align: center;
+            margin-left: 25%;
+        }
     </style>
 
     
@@ -146,17 +150,17 @@
         <a href='index.html' class=element> Contact </a>
     </div>
 
-    <div class=imageee>
+    <div class='imageee calligraphy'>
         <img class = first id=img src='NatureMadhubani.png'>
-        <p class="price"> Nature Madhubani </p>
+        <p class=price> Nature Madhubani </p>
     </div>
-    <div class=imageee>
+    <div class='imageee beardrawing'>
         <img class = first id=img src='bridalmadhubani.png'>
         <p class=price> Pumpkin Carving CMU Dog </p>
     </div>
     <div class=imageee>
         <img class = first id=img src='ramasitamadhubani.png'>
-        <p class=price> Eye Drawing </p>
+        <p class=price> Rama Sita Madhubani </p>
     </div>
     <br>
 
@@ -296,6 +300,8 @@
 
     <br>
 
+    <input class=mailinglist type="text" placeholder="Type your email"> 
+
 
 
 
@@ -318,6 +324,35 @@
     </div>
     <script type="text/javascript">
 
+        function loadData(k) {
+            var lookup = k.toLowerCase();
+            $.getJSON('projects.json',function(data) {
+                $each.(data,function(key,val){
+                    var sub_key = '.'+key;
+                    $(sub_key).css('display','none');
+                });
+                $each(data,function(key,val){
+                    for (val i = 0; i<val.length; i++)
+                    {
+                        console.log(lookup + " vs " + val[i]);
+                        if (val[i].includes(lookup))
+                        {
+                            var main_key = '.' + key;
+                            $(main_key).css('display','block');
+                        }
+
+                    }
+                });
+
+
+            }
+
+
+
+
+        }
+
+
         $(document).ready(function() {
 
         $(".a").hover( function() { 
@@ -335,12 +370,16 @@
                 $(".imageee").css('opacity','0%');
                 $(this).css('opacity','100%');
                 $(".price").animate({'opacity':'100%'},1000);}
-                
-
-
-            
             
         });
+
+        $(".mailinglist").keyup(function(event){
+            var email = $(this).val();
+            console.log(email);
+            loadData(email)
+        });
+
+
 
 
         });

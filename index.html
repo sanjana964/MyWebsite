@@ -11,11 +11,27 @@
     <link rel="stylesheet" type="text/css" href="./Give Me a Title!_files/style.css">  <!-- Insert StyleSheet -->
     <link rel="icon" href="https://cardadfar.github.io/stuco_webdev_website/assets/files/cool-icon.png">                    <!-- Insert Icon -->
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        
+    </script>
 </head>
 <body>
 
     <style type="text/css">
+        body, html {
+            margin: 0;
+            height: 100%;
+        }
+
+        .parallax-img {
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
         p {
             font-family:  Oswald;
         }
@@ -27,8 +43,13 @@
             width: 300px;
             text-align: center;
             
-            
         }
+        @media (max-width: 480px) {
+                #img {
+                    width: 100px;
+                    text-align: center;}
+
+            }
 
         .nav-bar{
             width: 200px;
@@ -55,7 +76,7 @@
             transition-property: color;
             transition-duration: 2s;
             transition-timing-function: linear;
-            transition-delay: 0s; }
+            transition-delay: 0s; 
         }
         
 
@@ -128,9 +149,10 @@
             margin-left: 30px;
             vertical-align: center;
         }
-        .mailinglist {
+        .searchbar {
             text-align: center;
-            margin-left: 25%;
+            margin-left: 75%;
+            position: sticky;
         }
     </style>
 
@@ -142,156 +164,161 @@
         <p> Welcome! </p>
     </div>
 
+    <input class=searchbar type="text" placeholder="Search for images"> 
+
     <div class=nav-bar>
         <a href='index.html' class=element> Home </a>
-        <a href='index.html' class=element> Experience </a>
-        <a href='index.html' class=element> Services </a>
-        <a href='index.html' class=element> About </a>
-        <a href='index.html' class=element> Contact </a>
+        <a href='experience.html' class=element> Experience </a>
+        <a href='services.html' class=element> Services </a>
+        <a href='personal.html' class=element> About </a>
+        <a href='contact.html' class=element> Contact </a>
     </div>
 
-    <div class='imageee calligraphy'>
+
+    
+
+    <div class='imageee NatureMadhubani'>
         <img class = first id=img src='NatureMadhubani.png'>
         <p class=price> Nature Madhubani </p>
     </div>
-    <div class='imageee beardrawing'>
+    <div class='imageee bridalmadhubani'>
         <img class = first id=img src='bridalmadhubani.png'>
-        <p class=price> Pumpkin Carving CMU Dog </p>
+        <p class=price> Bridal Madhubani </p>
     </div>
-    <div class=imageee>
+    <div class='imageee ramasitamadhubani'>
         <img class = first id=img src='ramasitamadhubani.png'>
         <p class=price> Rama Sita Madhubani </p>
     </div>
     <br>
 
 
-    <div class=imageee>
+    <div class='imageee temple'>
         <img class = first id=img src='temple.png'>
-        <p class=price> Introspection </p>
+        <p class=price> Temple Pen Drawing </p>
     </div>
-    <div class=imageee>
+    <div class='imageee GaneshaThanjavurArt'>
         <img class = first id=img src='GaneshaThanjavurArt.jpg'>
-        <p class=price> Ganesha </p>
+        <p class=price> Ganesha Thanjavur </p>
     </div>
-    <div class=imageee>
+    <div class='imageee gandhi'>
         <img class = first id=img src='gandhi.png'>
-        <p class=price> Nature Madhubani </p>
+        <p class=price> Gandhi Colored Pencil </p>
     </div>
 
     <br>
 
-    <div class=imageee>
+    <div class='imageee doggy'>
         <img class = first id=img src='doggy.png'>
-        <p class=price> Introspection </p>
+        <p class=price> Dog White Charcoal </p>
     </div>
-    <div class=imageee>
+    <div class='imageee HandDrawing'>
         <img class = first id=img src='HandDrawing.jpg'>
-        <p class=price> Ganesha </p>
+        <p class=price> Hand Drawing Charcoal </p>
     </div>
-    <div class=imageee>
+    <div class='imageee EyeDrawing'>
         <img class = first id=img src='EyeDrawing.jpg'>
-        <p class=price> Nature Madhubani </p>
+        <p class=price> Eye Drawing Charcoal </p>
     </div>
 
     <br>
 
-    <div class=imageee>
+    <div class='imageee Introspection'>
         <img class = first id=img src='Introspection.png'>
-        <p class=price> Introspection </p>
+        <p class=price> Introspection Portrait Charcoal </p>
     </div>
-    <div class=imageee>
+    <div class='imageee butterfly'>
         <img class = first id=img src='butterfly.png'>
-        <p class=price> Ganesha </p>
+        <p class=price> Butterfly Watercolor </p>
     </div>
-    <div class=imageee>
+    <div class='imageee orchids'>
         <img class = first id=img src='orchids.png'>
-        <p class=price> Nature Madhubani </p>
+        <p class=price> Orchids Multimedia </p>
     </div>
 
     <br>
 
-    <div class=imageee>
+    <div class='imageee beardrawing'>
         <img class = first id=img src='beardrawing.png'>
-        <p class=price> Introspection </p>
+        <p class=price> Bear Drawing Acrylic and Pen </p>
     </div>
-    <div class=imageee>
+    <div class='imageee succulents'>
         <img class = first id=img src='succulents.png'>
-        <p class=price> Ganesha </p>
+        <p class=price> Succulents Pot Acrylic </p>
     </div>
-    <div class=imageee>
+    <div class='imageee heffalumpkeychain'>
         <img class = first id=img src='heffalumpkeychain.png'>
-        <p class=price> Nature Madhubani </p>
+        <p class=price> Heffalump Keychain Shrink Plastic </p>
     </div>
     <br>
 
 
-    <div class=imageee>
+    <div class='imageee calligraphy'>
         <img class = first id=img src='calligraphy.png'>
-        <p class=price> Introspection </p>
+        <p class=price> Calligraphy </p>
     </div>
-    <div class=imageee>
+    <div class='imageee nytimes'>
         <img class = first id=img src='nytimes.jpg'>
-        <p class=price> Ganesha </p>
+        <p class=price> New York Times White Board Marker </p>
     </div>
-    <div class=imageee>
+    <div class='imageee cheerfulstickers'>
         <img class = first id=img src='cheerfulstickers.png'>
-        <p class=price> Nature Madhubani </p>
+        <p class=price> Cheerful Stickers with Copic </p>
     </div>
 
     <br>
 
-    <div class=imageee>
+    <div class='imageee soaps'>
         <img class = first id=img src='soaps.png'>
-        <p class=price> Introspection </p>
+        <p class=price> Soaps - Melt and Pour </p>
     </div>
-    <div class=imageee>
+    <div class='imageee tshirtcricut'>
         <img class = first id=img src='tshirtcricut.png'>
-        <p class=price> Ganesha </p>
+        <p class=price> T shirt with Cricut </p>
     </div>
-    <div class=imageee>
+    <div class='imageee heffalumpkeychain'>
         <img class = first id=img src='heffalumpkeychain.png'>
-        <p class=price> Nature Madhubani </p>
+        <p class=price> Heffalump Keychain </p>
     </div>
 
     <br>
 
-    <div class=imageee>
+    <div class='imageee SanjanaKrishnaHalloweenContest'>
         <img class = first id=img src='SanjanaKrishnaHalloweenContest.jpeg'>
-        <p class=price> Introspection </p>
+        <p class=price> Halloween Pumpkin Tartan </p>
     </div>
-    <div class=imageee>
+    <div class='imageee feltingfoxes'>
         <img class = first id=img src='feltingfoxes.png'>
-        <p class=price> Ganesha </p>
+        <p class=price> Felting Fox </p>
     </div>
-    <div class=imageee>
+    <div class='imageee crochetdog'>
         <img class = first id=img src='crochetdog.png'>
-        <p class=price> Nature Madhubani </p>
+        <p class=price> Crochet Dog </p>
     </div>
 
     <br>
 
-    <div class=imageee>
+    <div class='imageee gingerbread'>
         <img class = first id=img src='gingerbread.png'>
-        <p class=price> Introspection </p>
+        <p class=price> Gingerbread house </p>
     </div>
-    <div class=imageee>
+    <div class='imageee fondantroses'>
         <img class = first id=img src='fondantroses.png'>
-        <p class=price> Ganesha </p>
+        <p class=price> Fondant Rose </p>
     </div>
-    <div class=imageee>
+    <div class='imageee bow'>
         <img class = first id=img src='bow.png'>
-        <p class=price> Nature Madhubani </p>
+        <p class=price> Bow with ribbon </p>
     </div>
 
     <br>
 
-    <div class=imageee>
+    <div class='imageee embroidery'>
         <img class = first id=img src='embroidery.png'>
-        <p class=price> Introspection </p>
+        <p class=price> Embroidery </p>
     </div>
-    <div class=imageee>
+    <div class='imageee basket'>
         <img class = first id=img src='basket.jpg'>
-        <p class=price> Ganesha </p>
+        <p class=price> Basket weaving </p>
     </div>
     <div class=imageee>
         <img class = first id=img src=''>
@@ -300,7 +327,7 @@
 
     <br>
 
-    <input class=mailinglist type="text" placeholder="Type your email"> 
+    
 
 
 
@@ -327,25 +354,25 @@
         function loadData(k) {
             var lookup = k.toLowerCase();
             $.getJSON('projects.json',function(data) {
-                $each.(data,function(key,val){
+                $.each(data,function(key,val){
                     var sub_key = '.'+key;
                     $(sub_key).css('display','none');
                 });
-                $each(data,function(key,val){
-                    for (val i = 0; i<val.length; i++)
+                $.each(data,function(key,val){
+                    for (var i = 0; i<val.length; i++)
                     {
                         console.log(lookup + " vs " + val[i]);
                         if (val[i].includes(lookup))
                         {
                             var main_key = '.' + key;
-                            $(main_key).css('display','block');
+                            $(main_key).css('display','inline-block');
                         }
 
                     }
                 });
 
 
-            }
+            });
 
 
 
@@ -373,7 +400,7 @@
             
         });
 
-        $(".mailinglist").keyup(function(event){
+        $(".searchbar").keyup(function(event){
             var email = $(this).val();
             console.log(email);
             loadData(email)
@@ -387,6 +414,8 @@
         
 
     </script>
+
+    
 
     
 
